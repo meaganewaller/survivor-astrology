@@ -1,0 +1,6 @@
+<h1>Seasons</h1>
+
+<% @seasons.each do |season| %>
+  <h2>Season <%= season.season_number %>: <%= link_to season.name, season_url(season) %> </h2>
+  <p><%= season.contestants.count %> contestants</p>
+<% end %>
