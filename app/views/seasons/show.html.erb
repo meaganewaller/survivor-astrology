@@ -2,5 +2,5 @@
 
 <h2>Contestants</h2>
   <% @season.season_contestants.each do |contestant| %>
-  <h3><%= contestant.contestant.name %> - <%= contestant.contestant.sun_sign %></h3>
+  <h3><%= contestant.contestant.name %> - <%= contestant.contestant.sun_sign %> - <%= contestant.place %> place</h3>
 <% end %>

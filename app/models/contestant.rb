@@ -5,6 +5,11 @@ class Contestant < ApplicationRecord
 
   after_create :get_sun_sign
 
+  # Contestant scope
+  def self.where_sign_places(sun_sign, place)
+    joins(:season_contestants).where(sun_sign: sun_sign, season_contestants: { place: place} )
+  end
+
   def get_sun_sign
     puts "Getting sun sign for #{name}"
     unless birthday.empty?

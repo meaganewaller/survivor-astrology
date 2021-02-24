@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_23_031611) do
+ActiveRecord::Schema.define(version: 2021_02_24_014233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_031611) do
     t.bigint "season_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "place"
     t.index ["contestant_id"], name: "index_season_contestants_on_contestant_id"
     t.index ["season_id"], name: "index_season_contestants_on_season_id"
   end
